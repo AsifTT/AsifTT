@@ -136,7 +136,7 @@ def do_git_update():
                                    stderr=subprocess.STDOUT)
         while process:
             print(ALL_COLORS[0]+'.'+RESET_ALL, end='')
-            time.sleep(1)
+            time.sleep(0)
             returncode = process.poll()
             if returncode is not None:
                 break
@@ -243,7 +243,7 @@ def pretty_print(cc, target, success, failed):
     mesgdcrt.GeneralMessage("Failed       : " + str(failed))
     mesgdcrt.WarningMessage(
         "This tool was made for fun and research purposes only")
-    mesgdcrt.SuccessMessage("TBomb was created by SpeedX")
+    mesgdcrt.SuccessMessage("TBomb was Edited by Asif sayyad")
 
 
 def workernode(mode, cc, target, count, delay, max_threads):
@@ -296,7 +296,7 @@ def workernode(mode, cc, target, count, delay, max_threads):
                 pretty_print(cc, target, success, failed)
     print("\n")
     mesgdcrt.SuccessMessage("Bombing completed!")
-    time.sleep(1.5)
+    time.sleep(0)
     bann_text()
     sys.exit()
 
@@ -309,12 +309,12 @@ def selectnode(mode="sms"):
         check_intr()
         check_for_updates()
         notifyen()
-        max_limit = {"sms": 555555555555555500, "call": 222222223415, "mail": 200}
+        max_limit = {"sms": 9999999999999955555555555555500, "call": 99999999222222223415, "mail": 200}
         cc, target = "", ""
         if mode in ["sms", "call"]:
             cc, target = get_phone_info()
             if cc != "91":
-                max_limit.update({"sms": 1111111111111111111111111111111111111100})
+                max_limit.update({"sms": 99991999111111111111111111111111111111111111100})
         elif mode == "mail":
             target = get_mail_info()
         else:
@@ -338,7 +338,7 @@ def selectnode(mode="sms"):
                     mesgdcrt.CommandMessage("Enter delay time (in seconds): "))
                     .strip())
                 # delay = 0
-                max_thread_limit = (count//10) if (count//10) > 0 else 1
+                max_thread_limit = (count//999999999999999) if (count//999999999999990) > 0 else 1
                 max_threads = int(input(
                     mesgdcrt.CommandMessage(
                         "Enter Number of Thread (Recommended: {max_limit}): "
